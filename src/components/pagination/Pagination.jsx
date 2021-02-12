@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import style from './Pagination.css';
 import usePagination from './usePagination';
 
+
 const Pagination = () => {
   const { currentPage, handleClick } = usePagination();
 

@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Loading = () => (
-  <img src="https://tenor.com/9NRu.gif" alt="loading" />
+  <img src="https://media.giphy.com/media/GhmzCxQJNwTbxlujmC/giphy.gif" alt="loading" />
 );
 
 export default Loading;

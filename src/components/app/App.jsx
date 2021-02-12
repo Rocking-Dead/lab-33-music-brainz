@@ -8,13 +8,13 @@ export default function App() {
   return (
     <>
       <Router>
-      <ThemeModeProvider>
-      <Header/>
-      <Switch>
-      {/* <Route exact path="/" component={CharacterPage} />
+        <ThemeModeProvider>
+          <Header/>
+          <Switch>
+            {/* <Route exact path="/" component={CharacterPage} />
       <Route exact path="/characters/:id" component={CharacterById} /> */}
-      </Switch>
-      </ThemeModeProvider>
+          </Switch>
+        </ThemeModeProvider>
       </Router>
     </>
   );

@@ -1,15 +1,15 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render, cleanup } from '@testing-library/react';
-import Search from './SearchControls';
+import SearchBar from '../SearchBar';
 
-
-describe('Search component', () => {
+describe('SearchBar component', () => {
   afterEach(() => cleanup());
-  it('renders Search', () => {
+  it('renders SearchBar', () => {
     const { asFragment } = render(
-      <Search 
-        onChange={jest.fn()}
-      />
+      <MemoryRouter>
+        <SearchBar search={''} handleSearch={jest.fn()} />
+      </MemoryRouter>
     );
     expect(asFragment()).toMatchSnapshot();
   });

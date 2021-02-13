@@ -16,8 +16,8 @@ export const getReleasesById = (id) => {
     })));
 };
 
-export const getRecordingById = (release_id) => {
-  return fetch(`http://musicbrainz.org/ws/2/recording?release=${release_id}&fmt=json`)
+export const getRecordingById = (releaseId) => {
+  return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseId}&fmt=json`)
     .then(res => res.json())
     .then(json => json.recordings);
 };

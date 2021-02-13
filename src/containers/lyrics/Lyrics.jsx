@@ -8,7 +8,7 @@ const Lyrics = ({lyrics}) => {
     <li key={id}>{newLine}</li>
   });
 
-  return <ul data-testeid="Lyrics">{parsedLyrics}</ul>;
+  return <ul data-testid="Lyrics">{parsedLyrics}</ul>;
 };
 
 Lyrics.propTypes = {

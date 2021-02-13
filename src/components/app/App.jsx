@@ -15,7 +15,6 @@ export default function App() {
           <Header/>
           <Switch>
             <Route exact path="/" component={AllArtists} />
-            {/* <Route exact path="/characters/:id" component={CharacterById} /> */}
           </Switch>
         </ThemeModeProvider>
       </Router>

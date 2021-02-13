@@ -7,8 +7,13 @@ export const getAllArtists = (artist) => {
 
 export const getReleasesById = (id) => {
   return fetch(`http://musicbrainz.org/ws/2/release?artist=${id}&fmt=json`)
-    .then(res => res.json())
-    .then(json => json.releases);
+    .then((res) => res.json())
+    .then((res) => res.releases)
+    .then(releases => releases.map(release => ({
+      id: release.id,
+      title: release.title,
+      image: release['cover-art-archive']['front'] ? `http://coverartarchive.org/release/${release.id}/front` : 'https://www.placecage.com/100/100'
+    })));
 };
 
 export const getRecordingById = (release_id) => {

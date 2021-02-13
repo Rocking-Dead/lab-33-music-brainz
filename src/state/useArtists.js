@@ -7,19 +7,17 @@ export const useArtists = () => {
   const [artists, setArtists] = useState([]);
 
   const handleSearch = (e) => {
-    e.prevent.Default();
+    e.preventDefault();
 
-    const searchedArtist = e.target[0].value;
-
-    getAllArtists(searchedArtist).then((artists) => {
+    getAllArtists(search).then((artists) => {
       setArtists(artists);
-      setSearch(searchedArtist);
     });
   };
 
   return {
     artists,
     search,
+    setSearch,
     handleSearch
   };
 };

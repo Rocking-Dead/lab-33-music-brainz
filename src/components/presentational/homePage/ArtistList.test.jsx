@@ -10,8 +10,7 @@ describe ('ArtistList component', () => {
     const { asFragment } = render(
       <ThemeModeProvider>
         <MemoryRouter>
-          <ArtistList>
-            artist={[]}
+          <ArtistList artists={[]}>
           </ArtistList>
         </MemoryRouter>
       </ThemeModeProvider>

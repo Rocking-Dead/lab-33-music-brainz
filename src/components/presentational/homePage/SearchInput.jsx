@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchBar = ({ search, handleSearch }) => {
+const SearchBar = ({ search, handleSearch, setSearch }) => {
   return (
     <form onSubmit={handleSearch}>
-      <input defaultValue={search} />
+      <input onChange={({ target }) => setSearch(target.value)} defaultValue={search} />
       <button>Search</button>
     </form>
   );
@@ -13,7 +14,7 @@ const SearchBar = ({ search, handleSearch }) => {
 SearchBar.propTypes = {
   search: PropTypes.string.isRequired,
   handleSearch: PropTypes.func.isRequired,
-  
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

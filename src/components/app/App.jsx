@@ -1,7 +1,10 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AllArtists from '../../containers/home/AllArtists';
 import { ThemeModeProvider } from '../../state/themeModeContext';
 import Header from '../header/Header';
+
 
 
 export default function App() {
@@ -11,8 +14,8 @@ export default function App() {
         <ThemeModeProvider>
           <Header/>
           <Switch>
-            {/* <Route exact path="/" component={CharacterPage} />
-      <Route exact path="/characters/:id" component={CharacterById} /> */}
+            <Route exact path="/" component={AllArtists} />
+            {/* <Route exact path="/characters/:id" component={CharacterById} /> */}
           </Switch>
         </ThemeModeProvider>
       </Router>

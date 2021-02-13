@@ -1,7 +1,8 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render, cleanup } from '@testing-library/react';
-import SearchBar from '../SearchBar';
+import SearchBar from './SearchInput';
+
 
 describe('SearchBar component', () => {
   afterEach(() => cleanup());

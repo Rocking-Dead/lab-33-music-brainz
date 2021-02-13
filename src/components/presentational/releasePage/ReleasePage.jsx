@@ -18,6 +18,7 @@ const ReleasePage = ({ releases }) => {
       </li>
     );
   });
+  
   return (
     <ul>
       { releaseList }

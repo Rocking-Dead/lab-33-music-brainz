@@ -1,13 +1,19 @@
-const LYRICS_URL = 'https://api.lyrics.ovh/v1/';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const getLyrics = (artist, recordingTitle) => {
-  return fetch(LYRICS_URL + `/${artist}/${recordingTitle}`)
-    .then(res => {
-      if(!res.ok) throw 'Could not find lyrics';
+const Lyrics = ({lyrics}) => {
+  const parsedLyrics = lyrics.split("\n")
+  .map((newLine) => {
+    return 
+    <li key={id}>{newLine}</li>
+  });
 
-      return res.json();
-    });
+  return <ul data-testeid="Lyrics">{parsedLyrics}</ul>;
 };
 
+Lyrics.propTypes = {
+    lyrics: PropTypes.string.isRequired,
+};
 
+export default Lyrics;
 

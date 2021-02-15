@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+// import styles from '../../Global.css';
 
 const ArtistList = ({ artists }) => {
   const artistList = artists.map((artist) => {
     return (
-      <li key={artist.id}>
+      <li key={artist.id} >
         <Link to={`/releases/${artist.name}/${artist.id}`}>{artist.name}</Link>
       </li>
     );

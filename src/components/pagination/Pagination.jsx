@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Pagination.css';
-import usePagination from './usePagination';
+import usePagination from '../../state/usePagination';
+
 
 
 const Pagination = () => {
